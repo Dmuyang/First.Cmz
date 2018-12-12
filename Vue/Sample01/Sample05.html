@@ -1,0 +1,31 @@
+<!DOCTYPE html>     
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hello World</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>解决问题的路径</h2>
+        <ol>
+            <li v-for="method in methods" :key="0">{{ method.name}}</li>
+        </ol>
+    </div>
+    <script >
+        new Vue({
+            el:'#app',
+            data:{
+                methods:[
+                    {name:'谷歌'},
+                    {name:'百度'},
+                    {name:'必应'},
+                    {name:'群组'},
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

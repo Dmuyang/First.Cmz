@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hello World</title>
+    <script src="vue.js"></script>
+    <style>
+            .active {
+                font-size:20px;
+                color:red;
+            }
+        </style>
+</head>
+<body>
+    <div id="app">
+        <p class="active">you have clicked {{counter}} counts</p>
+        <button v-on:click="addCounter">come on!</button>
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                counter:0
+            },
+            methods:{
+                addCounter:function(){
+                    this.counter=this.counter+1;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hellod world</title>
+    <script src="vue.js">
+    </script>
+    <style>
+        .active {
+            font-size:20px;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <p :class="{active:isActive}">{{message}}</p>
+        <input v-model="message">
+    </div>
+    
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                message:'Hello World!',
+                isActive:true
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hello world</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{score}}</p>
+        <input v-model="score">
+        <div v-if="score>=90">
+            <p>优秀</p>
+        </div>
+        <div v-else-if="score>=70&&score<90">
+            <p>良</p>
+        </div>
+        <div v-else-if="score>=60&&score<70">
+            <p>及格</p>
+        </div>
+        <div v-else>
+            <p>未及格</p>
+        </div>
+    </div>
+    <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    score:100
+                      }
+            })
+    </script>
+</body>
+</html>
